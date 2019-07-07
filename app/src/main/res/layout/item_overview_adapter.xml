@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/detail"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/margin_padding"
+    android:layout_marginTop="@dimen/margin_padding"
+    android:layout_marginEnd="@dimen/margin_padding"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="@dimen/margin_padding">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/byColor"
+            android:layout_width="@dimen/margin_padding"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/content"
+            android:layout_alignParentTop="true"
+            android:background="@color/colorPrimary" />
+
+        <LinearLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/byColor"
+            android:orientation="vertical"
+            android:padding="@dimen/margin_padding">
+
+            <TextView
+                android:id="@+id/tanggalEvent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_padding"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/marker"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="@dimen/margin_padding"
+                android:background="@android:color/darker_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/exo_bold"
+                    android:text="Event By : "
+                    android:textAppearance="?textAppearanceBody2"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/by"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/exo_bold"
+                    android:textAppearance="?textAppearanceBody2"
+                    android:textSize="17sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/margin_padding"
+                android:background="@android:color/darker_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/exo_bold"
+                    android:text="Keterangan"
+                    android:textAppearance="?attr/textAppearanceListItem"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/EventName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/exo_bold"
+                    android:textAppearance="?attr/textAppearanceListItem" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
